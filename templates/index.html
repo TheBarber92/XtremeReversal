@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XtremeReversal</title>
+</head>
+<body>
+    <h2>XtremeReversal: Upload Screenshot</h2>
+    <form action="/analyze" enctype="multipart/form-data" method="post">
+        <input name="file" type="file">
+        <input type="submit" value="Analyze Screenshot">
+    </form>
+    {% if result %}
+    <p><strong>Result:</strong> {{ result }}</p>
+    {% endif %}
+</body>
+</html>
