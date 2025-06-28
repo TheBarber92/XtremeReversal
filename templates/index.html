@@ -1,17 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>XtremeReversal</title>
+    <title>XtremeReversal Trial</title>
 </head>
 <body>
-    <h2>XtremeReversal: Upload Screenshot</h2>
+    <h2>XtremeReversal Upload</h2>
     <form action="/analyze" enctype="multipart/form-data" method="post">
-        <input name="file" type="file">
-        <input type="submit" value="Analyze Screenshot">
+        <label>User ID:</label><br>
+        <input type="text" name="user_id" required><br><br>
+        <label>Select Screenshot:</label><br>
+        <input type="file" name="file" required><br><br>
+        <button type="submit">Analyze</button>
     </form>
     {% if result %}
-    <p><strong>Result:</strong> {{ result }}</p>
+        <h3>Result for {{ user_id }}: {{ result }}</h3>
+    {% endif %}
+    {% if error %}
+        <h3 style="color: red">{{ error }}</h3>
     {% endif %}
 </body>
 </html>
