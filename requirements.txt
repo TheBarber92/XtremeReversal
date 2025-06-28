@@ -1,7 +1,7 @@
 fastapi
 uvicorn
-python-multipart
 jinja2
 pillow
 opencv-python
 numpy
+python-multipart

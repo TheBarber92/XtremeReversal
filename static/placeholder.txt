@@ -1,0 +1,1 @@
+This static folder is required by FastAPI mount.
